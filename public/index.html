@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORGood</title>
+  <link rel="stylesheet" href="./style.css">
+ <style>
+  #cart-items {
+    max-height: 200px;    
+    overflow-y: auto;     
+    padding-right: 10px;  
+  }
+  @media (max-width: 640px) {
+  #cart-modal {
+    width: 100%; /* Makes the card take full width on small screens */
+  }
+}
+
+ </style>
+</head>
+<body>
+  
+  <!-- navlink section  -->
+ <nav class="p-5">
+  <div class="container mx-auto flex justify-between items-center px-5">
+      <a href="/" class="rounded-sm">
+          <img src="./images/logo.png"
+          width="80px"
+          height="30px"> 
+      </a>
+      <div>
+          <ul class="flex gap-4 items-center text-sm">
+          <li class="cursor-pointer hover:border-b-2 hover:border-b-[#6cc13b] opacity-80 hover:opacity-100 hover:font-semibold">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="cursor-pointer hover:border-b-2 hover:border-b-[#6cc13b] opacity-80 hover:opacity-100 hover:font-semibold">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          <li class="cursor-pointer hover:border-b-2 hover:border-b-[#6cc13b] opacity-80 hover:opacity-100 hover:font-semibold">
+              <a class="nav-link" id="product-link" href="#product">Product</a>
+            </li>
+            <li class="cursor-pointer hover:border-b-2 hover:border-b-[#6cc13b] opacity-80 hover:opacity-100 hover:font-semibold">
+              <a class="nav-link" href="#testimonial">Testimonials</a>
+            </li>
+          <li class="cursor-pointer hover:border-b-2 hover:border-b-[#6cc13b] opacity-80 hover:opacity-100 hover:font-semibold">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+         </ul> 
+      </div>
+      <div class="px-4 flex flex-row sm:flex-row items-center gap-3 sm:gap-4">
+        <nav class=" p-3 flex justify-between">
+          <div class="text-white text-lg"></div>
+          <div class="relative">
+              <button id="cart-btn" class="text-white md:flex p-2 px-6 bg-[#6cc13b] uppercase mb-2 rounded-full font-bold opacity-90 hover:opacity-100 whitespace-nowrap">
+                  Cart (<span id="cart-count">0</span>)
+              </button>
+          </div>
+      </nav>
+
+          <button class="flex p-2 px-8 bg-[#6cc13b] uppercase mb-2 rounded-full text-white font-bold opacity-90 hover:opacity-100 whitespace-nowrap">
+             <a href="signin.html">Sign in </a> 
+            </button>
+      </div>
+  </div>
+</nav>
+
+
+<!-- Hero section   -->
+<section class="section sm:w-[78%] flex justify-center items-center mx-auto" id="home">
+  <!-- toast -->
+  <div id="toastBox"></div>
+
+  <div class="flex flex-col md:flex-row mt-22 xlg:mt-24 justify-center items-center mx-auto gap-6 w-full bg-white">
+    <div class="flex flex-col justify-center gap-7 px-4 md:px-0 w-full items-center">
+      <h1 class="textSize text-6xl lg:text-7xl self-start font-bold text-left text-[#6cc13b]">
+        Pure
+        <span class="">Goodness</span>
+        <br>
+
+        Farm <span class="">To</span>
+      
+        Plate
+      </h1>
+      <p>
+        At ORGOOD, we believe in the power of pure, unprocessed ingredients straight from nature. Our commitment to sustainability and health drives us to source only the freshest, chemical-free produce from trusted local farms.
+      </p>
+      <!-- <a href="#about"> -->
+      <button class="hidden md:flex self-start p-3 px-10 bg-[#6cc13b] rounded-full text-white font-bold opacity-90 hover:opacity-100">
+     Get Started
+    </button>
+     <!-- </a> -->
+    </div>
+
+    <!-- image -->
+
+    <div class="w-full flex justify-center items-center">
+      <img src="images/mainsection.png" class="w-[290px] xs:w-[310px] sm:w-[370px] md:w-[490px]">
+    </div>
+  </div>
+  
+</section>
+
+  <!-- About section  -->
+  <section id="about"
+  class="section bg-[#6cc13b] bg-opacity-20 mt-10 flex flex-col md:flex-row items-center justify-center mx-auto py-16"
+  id="section-1" data-aos="fade-left"
+>
+  <div
+    class="w-full md:w-[85%] lg:w-[78%] flex flex-col gap-10 md:flex-row px-7 md:px-0 justify-between items-center"
+  >
+    <div class="">
+      <img
+        src="images/newsletterimg-removebg-preview.png"
+        class="w-[420px]"
+      />
+    </div>
+
+    <div class="w-full lg:w-[45%]">
+      <h2 class="textSize text-[#6cc13b] self-start font-bold text-left">
+        ABOUT ORGOOD
+      </h2>
+      <h1 class="font-bold text-4xl md:text-5xl text-[#6cc13b]">
+        Where Nature<br />
+        Meets Integrity
+      </h1>
+
+      <p class="self-start py-3"  data-aos="fade-up">
+        ORGOOD was founded with a clear mission: to deliver the finest, sustainably sourced organic products to our customers. We partner with trusted local farms that share our commitment to quality and environmental stewardship. 
+      </p>
+      <p class="self-start py-3"  data-aos="fade-up">
+        We are dedicated to complete transparency and integrity in everything we do. From sourcing our products to delivering them to your doorstep, we maintain open communication about where your food comes from and how it’s grown.
+      </p>
+      <a href="#product">
+      <button
+        class="p-3 px-10 bg-[#6cc13b] uppercase rounded-full text-white font-bold opacity-90 mt-3 hover:opacity-100 text-sm"  data-aos="zoom-in"
+      >
+        Buy Now &#8594;
+      </button>
+      </a>
+    </div>
+  </div>
+ </section>
+
+     <!-- Product section  -->
+     <section class="py-12" id="product">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl text-[#6cc13b] font-bold text-center mb-8">Our Products</h2>
+        
+        <!-- Grid of 9 product cards (3x3 matrix) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          
+          <!-- Card 1 -->
+          <div class="bg-[#648353] p-6 rounded-lg shadow-lg">
+            <img src="./images/product1.jpg" alt="Product 1" class="w-full h-40 object-cover mb-4 rounded transition-transform duration-300  ease-in-out hover:scale-110">
+            <h3 class="text-xl font-semibold mb-2">Organic Cabbage</h3>
+            <div class="flex justify-between items-center mt-4">
+              <button onclick="addToCart('Organic Cabbage', 20)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add to Cart</button>
+              <p class="text-lg font-semibold">Rs. 20/Pc.</p>
+            </div>
+          </div>
+
+  
+          <!-- Card 2 -->
+          <div class="bg-[#648353] p-6 rounded-lg shadow-lg">
+            <img src="./images/product2.jpg" alt="Product 2" class="w-full h-40 object-cover mb-4 rounded transition-transform duration-300  ease-in-out hover:scale-110">
+            <h3 class="text-xl font-semibold mb-2">Organic Cucumber</h3>
+            <div class="flex justify-between items-center mt-4">
+              <button onclick="addToCart('Organic Cucumber',25)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add to Cart</button>
+              <p class="text-lg font-semibold">Rs. 25/Kg</p>
+            </div>
+          </div>
+  
+          <!-- Card 3 -->
+          <div class="bg-[#648353] p-6 rounded-lg shadow-lg">
+            <img src="./images/product3.jpg" alt="Product 3" class="w-full h-40 object-cover mb-4 rounded transition-transform duration-300  ease-in-out hover:scale-110">
+            <h3 class="text-xl font-semibold mb-2">Organic Tomato</h3>
+            <div class="flex justify-between items-center mt-4">
+              <button onclick="addToCart('Organic Tomato',40)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add to Cart</button>
+              <p class="text-lg font-semibold">Rs. 40/Kg</p>
+            </div>
+          </div>
+  
+          <!-- Add more products similarly for Card 4-9 -->
+          <!-- Card 4 -->
+          <div class="bg-[#648353] p-6 rounded-lg shadow-lg">
+            <img src="./images/product4.jpg" alt="Product 4" class="w-full h-40 object-cover mb-4 rounded transition-transform duration-300  ease-in-out hover:scale-110">
+            <h3 class="text-xl font-semibold mb-2">Organic Coriander</h3>
+            <div class="flex justify-between items-center mt-4">
+              <button onclick="addToCart('Organic Coriander',10)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add to Cart</button>
+              <p class="text-lg font-semibold">Rs. 10/Bundle</p>
+            </div>
+          </div>
+  
+          <!-- Card 5 -->
+          <div class="bg-[#648353] p-6 rounded-lg shadow-lg">
+            <img src="./images/product5.jpg" alt="Product 5" class="w-full h-40 object-cover mb-4 rounded transition-transform duration-300  ease-in-out hover:scale-110">
+            <h3 class="text-xl font-semibold mb-2">Organic Carrot</h3>
+            <div class="flex justify-between items-center mt-4">
+              <button onclick="addToCart('Organic carrot',20)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add to Cart</button>
+              <p class="text-lg font-semibold">Rs. 20/Kg</p>
+            </div>
+          </div>
+  
+          <!-- Card 6 -->
+          <div class="bg-[#648353] p-6 rounded-lg shadow-lg">
+            <img src="./images/product6.jpg" alt="Product 6" class="w-full h-40 object-cover mb-4 rounded transition-transform duration-300  ease-in-out hover:scale-110">
+            <h3 class="text-xl font-semibold mb-2">Organic Broccoli</h3>
+            <div class="flex justify-between items-center mt-4">
+              <button onclick="addToCart('Organic Broccoli',50)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add to Cart</button>
+              <p class="text-lg font-semibold">Rs. 50/Kg</p>
+            </div>
+          </div>
+  
+          <!-- Card 7 -->
+          <div class="bg-[#648353] p-6 rounded-lg shadow-lg">
+            <img src="./images/product7.jpg" alt="Product 7" class="w-full h-40 object-cover mb-4 rounded transition-transform duration-300  ease-in-out hover:scale-110">
+            <h3 class="text-xl font-semibold mb-2">Organic Spices</h3>
+            <div class="flex justify-between items-center mt-4">
+              <button onclick="addToCart('Organic Spices',90)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add to Cart</button>
+              <p class="text-lg font-semibold">Rs. 90/kg</p>
+            </div>
+          </div>
+  
+          <!-- Card 8 -->
+          <div class="bg-[#648353] p-6 rounded-lg shadow-lg">
+            <img src="./images/product8.jpg" alt="Product 8" class="w-full h-40 object-cover mb-4 rounded transition-transform duration-300  ease-in-out hover:scale-110">
+            <h3 class="text-xl font-semibold mb-2">Organic Green Peas</h3>
+            <div class="flex justify-between items-center mt-4">
+              <button onclick="addToCart('Organic Green Peas',30)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add to Cart</button>
+              <p class="text-lg font-semibold">Rs. 30/kg</p>
+            </div>
+          </div>
+  
+          <!-- Card 9 -->
+          <div class="bg-[#648353] p-6 rounded-lg shadow-lg">
+            <img src="./images/product9.jpg" alt="Product 9" class="w-full h-40 object-cover mb-4 rounded transition-transform duration-300  ease-in-out hover:scale-110">
+            <h3 class="text-xl font-semibold mb-2">Organic Green Sem</h3>
+            <div class="flex justify-between items-center mt-4">
+              <button onclick="addToCart('Organic Green Sem',30)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add to Cart</button>
+              <p class="text-lg font-semibold">Rs. 30/kg</p>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+
+   <!-- Notification Message with Progress Bar -->
+<div id="notification" class="fixed top-4 right-4 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg hidden flex-col items-center space-y-2">
+  <div class="flex items-center space-x-2">
+    <span class="text-2xl">✓</span>
+    <span class="text-lg font-semibold">Item added to  Your cart</span>
+  </div>
+  <!-- Progress Bar -->
+  <div class="w-full h-2 bg-green-300 rounded-full overflow-hidden">
+    <div id="progress-bar" class="bg-white h-full transition-all duration-[5000ms]"></div>
+  </div>
+</div>
+
+<!-- cart which is initially hidden  -->
+<div id="cart-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden justify-center items-center">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3">
+      <h2 class="text-2xl text-[#6cc13b] font-semibold mb-4">Your Cart</h2>
+
+      <!-- Cart Items List -->
+      <div id="cart-items" class="bg-gray-100 p-4 rounded-lg shadow-inner mb-4 overflow-y-auto max-h-60">
+          <!-- Cart items will be inserted here dynamically -->
+      </div>
+
+      <!-- Total Price Section -->
+      <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl text-[#6cc13b] font-semibold">Total Price: Rs-<span id="total-price">0</span></h3>
+      </div>
+      
+      <!-- cart card  -->
+       <form id="order-form">
+      <div class="mt-4">
+        <!-- Name Input -->
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+          <p id="name-error" class="text-red-500 text-sm hidden">Please enter your name.</p>
+        </div>
+        
+        <!-- Mobile Input -->
+        <div class="mb-4">
+          <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile</label>
+          <input type="tel" id="mobile" name="mobile" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+          <p id="mobile-error" class="text-red-500 text-sm hidden">Please enter your mobile number.</p>
+        </div>
+        
+        <!-- Address Input -->
+        <div class="mb-4">
+          <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+          <textarea id="address" name="address" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3" required></textarea>
+          <p id="address-error" class="text-red-500 text-sm hidden">Please enter your address.</p>
+        </div>
+
+        <!-- Place Your Order Button (already exists in your code) -->
+        <button id="place-order-btn" type="button" class="w-70% bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600" disabled>Place Your Order</button>
+      </div>
+      </form> 
+       
+
+      <!-- Close Button -->
+      <button class="mt-4 ml-5 text-gray-600 hover:text-gray-900" id="close-cart-btn">Close</button>
+  </div>
+</div>
+
+
+    <!-- Testimonials  -->
+    <section class="bg-[#76bf6eee] py-12" id="testimonial">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-8">Testimonials</h2>
+        
+        <!-- Grid of 4 review boxes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Review 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <h3 class="text-xl font-semibold">John Doe</h3>
+              <p class="text-sm text-gray-600">"Fantastic products! ORGOOD is the best platform to buy organic foods."</p>
+            </div>
+            <p class="text-yellow-500">★★★★☆</p>
+          </div>
+    
+          <!-- Review 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <h3 class="text-xl font-semibold">Jane Smith</h3>
+              <p class="text-sm text-gray-600">"I love the variety of organic options available. Highly recommended!"</p>
+            </div>
+            <p class="text-yellow-500">★★★★★</p>
+          </div>
+    
+          <!-- Review 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <h3 class="text-xl font-semibold">Sam Brown</h3>
+              <p class="text-sm text-gray-600">"Great customer service and fresh products.ORGOOD always on top!"</p>
+            </div>
+            <p class="text-yellow-500">★★★★☆</p>
+          </div>
+    
+          <!-- Review 4 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <h3 class="text-xl font-semibold">Emily White</h3>
+              <p class="text-sm text-gray-600">"Impressive variety and quality. Definitely my go-to store for organic food."</p>
+            </div>
+            <p class="text-yellow-500">★★★★★</p>
+          </div>
+    
+        </div>
+      </div>
+
+      <!-- newletter  -->
+      <section class="max-w-4xl mx-auto p-6 bg-[#afe392] shadow-md rounded-lg mt-20 mb-20 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <img src="./images/imageforhero1-removebg-preview.png" alt="Newsletter Image" class="w-full h-auto rounded-lg">
+         <div>
+        <h2 class="text-2xl font-semibold text-black text-center mb-4">Subscribe to our Newsletter</h2>
+        <p class="text-center text-gray-600 mb-6">Stay updated on the news and insights into organic living!</p>
+        <form action="#" method="POST" class="flex flex-col space-y-4">
+          <input type="email" name="email" placeholder="Enter your email" class="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <button type="button" class="bg-[#6cc13b] text-white font-semibold p-3 rounded-md hover:bg-green-700">Subscribe</button>
+        </form>
+        </div>
+        </div>
+      </section>
+    </section>
+    
+
+      <!-- Footer  -->
+      <footer class="bg-gray-800 text-white py-8" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Contact Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+              <ul>
+                <li class="mb-1">Email: <a href="mailto:info@ORGoodfood.com" class="text-green-400 hover:underline">info@ORGoodfood.com</a></li>
+                <li class="mb-1">Phone: <a href="#" class="text-green-400 hover:underline">+919111111111</a></li>
+                <li class="mb-1">Address: 123 Green Street, Organic City, Earth</li>
+              </ul>
+            </div>
+      
+            <!-- Social Media Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22 12a10 10 0 1 0-11 9.95V15.4h-2v-3.4h2V9.9c0-2.3 1.3-3.6 3.3-3.6.9 0 1.7.1 2 .2v2.2h-1.4c-1.1 0-1.4.7-1.4 1.4v1.7h2.8l-.4 3.4h-2.4v6.55A10 10 0 0 0 22 12z"/>
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22 5.9a8.6 8.6 0 0 1-2.4.6A4.1 4.1 0 0 0 21.4 4a8.3 8.3 0 0 1-2.7 1A4.2 4.2 0 0 0 12.1 9a12 12 0 0 1-9-4.5 4.1 4.1 0 0 0 1.3 5.5A4 4 0 0 1 2.8 9v.1a4.2 4.2 0 0 0 3.4 4.1 4 4 0 0 1-1.8.1 4.2 4.2 0 0 0 3.9 2.9A8.5 8.5 0 0 1 2 18.6 12 12 0 0 0 7.7 20c7.5 0 11.7-6.2 11.7-11.6v-.5A8.3 8.3 0 0 0 22 5.9z"/>
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white" aria-label="Instagram">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.2a9.8 9.8 0 0 0-9.8 9.8 9.8 9.8 0 0 0 9.8 9.8 9.8 9.8 0 0 0 9.8-9.8A9.8 9.8 0 0 0 12 2.2zm0 1.8a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm3.8 2a1.4 1.4 0 0 0-1.4 1.4c0 .8.6 1.4 1.4 1.4a1.4 1.4 0 0 0 0-2.8zm-3.8 2.2a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 1.8a3.2 3.2 0 1 1 0 6.4 3.2 3.2 0 0 1 0-6.4z"/>
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white" aria-label="LinkedIn">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.4 20.4h-3.4v-5.5c0-1.3 0-3-1.9-3-1.9 0-2.2 1.4-2.2 2.9v5.6H9.5V9.4h3.3v1.5c.5-.8 1.8-1.6 3.4-1.6 3.6 0 4.3 2.3 4.3 5.3v5.8zM6 8H2.6v12.4H6V8zm-1.7-4.3c-1.2 0-2 .8-2 2 0 1.1.8 2 2 2 1.1 0 2-.8 2-2 0-1.1-.9-2-2-2z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+      
+            <!-- Copyright Section -->
+            <div class="md:text-right">
+              <h3 class="text-lg font-semibold mb-2">© 2024 ORGood food pvt. Ltd.</h3>
+              <p class="text-gray-400">All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
