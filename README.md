@@ -34,10 +34,4 @@ The project is deployed on Vercel, ensuring seamless performance and accessibili
 
 
 Feel free to clone or fork this project, and explore the code!
-## Deployment
 
-The project is deployed on Vercel, ensuring seamless performance and accessibility online.
-
-
-
-Feel free to clone or fork this project, and explore the code!
